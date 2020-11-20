@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>easy_panda_moveit_config</name>
+  <version>0.7.4</version>
+  <description>Straightforward launch files for the Franka Panda</description>
+
+  <maintainer email="esposito@imfusion.com">Marco Esposito</maintainer>
+
+  <license>BSD</license>
+
+  <author email="esposito@imfusion.com">Marco Esposito</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>ros-noetic-moveit-resources-panda-moveit-config</exec_depend>
+
+  <export>
+  </export>
+</package>
