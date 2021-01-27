@@ -1,14 +1,12 @@
 # easy_panda_moveit_config
 
-This is an add-on for the upstream MoveIt! config for the Franka Emika Panda robot.
+This is a thin wrapper for the upstream MoveIt! config for the Franka Emika Panda robot.
 
-It replaces the MoveIt! RViz tutorial buttons with the planning interface.
+It replaces the MoveIt! RViz tutorial buttons with the planning interface, allowing you to move the robot right away.
 
-<img src="easy_panda_moveit_config/docs/img/demo.png" width="345"/>
+<img src="easy_panda_moveit_config/docs/img/demo.png" width="640"/>
 
 ### Play around with the robot in RViz
-
-Prerequisite: `ros-noetic-moveit-resources-panda-moveit-config` is installed
 
 ```bash 
 roslaunch easy_panda_moveit_config demo.launch
