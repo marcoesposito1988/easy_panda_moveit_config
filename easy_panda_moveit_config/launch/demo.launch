@@ -10,6 +10,7 @@
   <arg name="debug" default="false" />
 
   <arg name="launch_rviz" default="true" />
+  <arg name="load_gripper" default="true"/>
 
   <!--
   By default, hide joint_state_publisher's GUI
@@ -24,6 +25,7 @@
   <!-- Load the URDF, SRDF and other .yaml configuration files on the param server -->
   <include file="$(find panda_moveit_config)/launch/planning_context.launch">
     <arg name="load_robot_description" value="true"/>
+    <arg name="load_gripper" value="$(arg load_gripper)"/>
   </include>
 
   <!-- If needed, broadcast static tf for robot root -->
@@ -41,6 +43,7 @@
 
   <!-- Run the main MoveIt executable without trajectory execution (we do not have controllers configured by default) -->
   <include file="$(find panda_moveit_config)/launch/move_group.launch">
+    <arg name="load_gripper" value="$(arg load_gripper)"/>
     <arg name="allow_trajectory_execution" value="true"/>
     <arg name="fake_execution" value="true"/>
     <arg name="info" value="true"/>
