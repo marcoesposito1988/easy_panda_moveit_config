@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<launch>
+    <arg name="load_gripper" default="true"/>
+
+    <include file="$(find panda_moveit_config)/launch/planning_context.launch">
+        <arg name="load_robot_description" value="true"/>
+        <arg name="load_gripper" value="$(arg load_gripper)"/>
+    </include>
+
+    <node name="joint_state_publisher_gui" pkg="joint_state_publisher_gui" type="joint_state_publisher_gui" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find easy_panda_moveit_config)/launch/display.rviz" required="true"/>
+</launch>

@@ -12,6 +12,7 @@
 
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>ros-noetic-moveit-resources-panda-moveit-config</exec_depend>
+  <exec_depend>joint_state_publisher_gui</exec_depend>
 
   <export>
   </export>
